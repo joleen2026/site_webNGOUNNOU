@@ -32,3 +32,26 @@ cross.addEventListener('click', function(){
     headerbar.style.right = '-100%';
 })
 
+document.getElementById('whatsappBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const text = encodeURIComponent(
+            `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`
+        );
+        window.open(`https://wa.me/237657662216?text=${text}`, '_blank');
+    });
+
+    document.getElementById('gmailBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const subject = encodeURIComponent('Contact depuis le site');
+        const body = encodeURIComponent(
+            `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`
+        );
+        window.open(`mailto:poissonneriengounnou@gmail.com?subject=${subject}&body=${body}`, '_blank');
+    });
+
