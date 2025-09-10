@@ -1,179 +1,297 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produits - NGOUNNOU</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produits - NGOUNNOU</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <header>
-        <div class="header">
-            <div class="headerbar">
-                <div class="account">
-                    <ul>
-                        <a href="#"><li><i class="fa-solid fa-house-chimney"></i></li></a>
-                        <a href="#"><li><i class="fa-solid fa-magnifying-glass searchicon" id="searchicon1"></i></li></a>
-                        <div class="search" id="searchinput1">
-                            <input type="search" placeholder="Rechercher...">
-                            <i class="fa-solid fa-magnifying-glass srchicon"></i>
-                        </div> 
-                    </ul>
-                </div>
-                <div class="nav">
-                    <ul>
-                        <a href="index.html"><li>Accueil</li></a>
-                        <a href="apropos.html"><li>A propos</li></a>
-                        <a href="produits.html"><li>Produits</li></a>   
-                        <a href="contact.html"><li>Contact</li></a>
-                    </ul>
-                </div>
-            </div>
-            <div class="logo">
-              <img src="./images/official logo.jpg" alt="">
-            </div>
-            <div class="bar">
-                <i class="fa-solid fa-bars"></i>
-                <i class="fa-solid fa-xmark" id="hdcross"></i>
-            </div>
-            <div class="nav">
-                <ul>
-                    <a href="index.html"><li>Accueil</li></a>
-                    <a href="apropos.html"><li>A propos</li></a>
-                    <a href="produits.html"><li>Produits</li></a>   
-                    <a href="contact.html"><li>Contact</li></a>
-                </ul>
-            </div>
-            <div class="account">
-                <ul>
-                    <a href="#"><li><i class="fa-solid fa-house-chimney"></i></li></a>
-                    <a href="#"><li><i class="fa-solid fa-magnifying-glass searchicon" id="searchicon2"></i></li></a>
-                    <div class="search" id="searchinput2">
-                        <input type="search" placeholder="Rechercher...">
-                        <i class="fa-solid fa-magnifying-glass srchicon"></i>
-                    </div>
-                </ul>
-            </div>
-        </div>
-    </header>
+<body class="produits-bg">
 
-    <div class="accueil">
-        <h1 style="text-align:center; color:#1a3556; margin:40px 0 20px 0;">Nos Produits</h1>
-        <div class="product-items">
-            <div class="product-card">
-                <img src="./images/item1.jpg" alt="Bar commun">
-                <h3>Bar commun</h3>
-                <p>Poisson blanc à la chair fine, idéal pour les grillades et les plats raffinés.</p>
-                <p class="product-price">5 000 FCFA/kg</p>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="header">
+      <div class="headerbar">
+        <div class="account">
+          <ul>
+            <a href="index.html"><li><i class="fa-solid fa-house-chimney"></i></li></a>
+            <a href="#"><li><i class="fa-solid fa-magnifying-glass searchicon" id="searchicon1"></i></li></a>
+            <div class="search" id="searchinput1">
+              <input type="search" placeholder="Rechercher...">
+              <i class="fa-solid fa-magnifying-glass srchicon"></i>
             </div>
-            <div class="product-card">
-                <img src="./images/item2.jpg" alt="Carpe">
-                <h3>Carpe</h3>
-                <p>Poisson d'eau douce, parfait pour les recettes traditionnelles et les bouillons.</p>
-                <p class="product-price">3 200 FCFA/kg</p>
-            </div>
-            <div class="product-card">
-                <img src="./images/item3.jpg" alt="Tilapia">
-                <h3>Tilapia</h3>
-                <p>Poisson populaire, chair tendre et savoureuse, facile à cuisiner.</p>
-                <p class="product-price">2 800 FCFA/kg</p>
-            </div>
-            <div class="product-card">
-                <img src="./images/product1.jpg" alt="Maquereau">
-                <h3>Maquereau</h3>
-                <p>Poisson gras, riche en oméga-3, parfait pour le fumage ou le grill.</p>
-                <p class="product-price">4 500 FCFA/kg</p>
-            </div>
-            <div class="product-card">
-                <img src="./images/product2.jpg" alt="Sole">
-                <h3>Sole</h3>
-                <p>Poisson plat, chair délicate, idéal pour les plats gastronomiques.</p>
-                <p class="product-price">6 000 FCFA/kg</p>
-            </div>
-            <div class="product-card">
-                <img src="./images/product3.jpg" alt="Dorade">
-                <h3>Dorade</h3>
-                <p>Poisson de mer, goût subtil, apprécié pour les cuissons au four.</p>
-                <p class="product-price">5 500 FCFA/kg</p>
-            </div>
-            <div class="product-card">
-                <img src="./images/product4.jpg" alt="Sardine">
-                <h3>Sardine</h3>
-                <p>Petite taille, riche en nutriments, parfaite pour les grillades et les conserves.</p>
-                <p class="product-price">2 000 FCFA/kg</p>
-            </div>
-            <div class="product-card">
-                <img src="./images/product5.jpg" alt="Capitaine">
-                <h3>Capitaine</h3>
-                <p>Poisson noble, chair ferme et savoureuse, idéal pour les plats africains.</p>
-                <p class="product-price">7 000 FCFA/kg</p>
-            </div>
-            <div class="product-card">
-                <img src="./images/product6.jpg" alt="Thon">
-                <h3>Thon</h3>
-                <p>Poisson de mer, très apprécié pour les sushis et les grillades.</p>
-                <p class="product-price">8 000 FCFA/kg</p>
-            </div>
-            <div class="product-card">
-                <img src="./images/product7.jpg" alt="Merlu">
-                <h3>Merlu</h3>
-                <p>Poisson blanc, chair tendre, parfait pour les plats en sauce.</p>
-                <p class="product-price">4 000 FCFA/kg</p>
-            </div>
-            <div class="product-card">
-                <img src="./images/product8.jpg" alt="Crevette">
-                <h3>Crevette</h3>
-                <p>Fruit de mer, goût délicat, idéal pour les entrées et les plats raffinés.</p>
-                <p class="product-price">9 000 FCFA/kg</p>
-            </div>
-            <div class="product-card">
-                <img src="./images/product9.jpg" alt="Baracuda">
-                <h3>Baracuda</h3>
-                <p>Poisson de mer, chair ferme, apprécié pour les grillades et les plats exotiques.</p>
-                <p class="product-price">6 500 FCFA/kg</p>
-            </div>
-            <div class="product-card">
-                <img src="./images/product10.jpg" alt="Espadon">
-                <h3>Espadon</h3>
-                <p>Poisson à la chair ferme, idéal pour les steaks et les grillades.</p>
-                <p class="product-price">10 000 FCFA/kg</p>
-            </div>
-            <div class="product-card">
-                <img src="./images/product11.jpg" alt="Rouget">
-                <h3>Rouget</h3>
-                <p>Poisson rouge, goût raffiné, parfait pour les plats méditerranéens.</p>
-                <p class="product-price">5 800 FCFA/kg</p>
-            </div>
-            <div class="product-card">
-                <img src="./images/product12.jpg" alt="Langouste">
-                <h3>Langouste</h3>
-                <p>Fruit de mer de luxe, chair tendre et savoureuse.</p>
-                <p class="product-price">15 000 FCFA/kg</p>
-            </div>
+          </ul>
         </div>
+        <div class="nav">
+          <ul>
+            <a href="index.html"><li>Accueil</li></a>
+            <a href="apropos.html"><li>A propos</li></a>
+            <a href="produits.html" class="active"><li>Produits</li></a>
+            <a href="contact.html"><li>Contact</li></a>
+          </ul>
+        </div>
+      </div>
+      <div class="logo">
+        <img src="./images/official logo.jpg" alt="Logo NGOUNNOU">
+      </div>
+      <div class="bar">
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-xmark" id="hdcross"></i>
+      </div>
+      <div class="nav">
+        <ul>
+          <a href="index.html"><li>Accueil</li></a>
+          <a href="apropos.html"><li>A propos</li></a>
+          <a href="produits.html" class="active"><li>Produits</li></a>
+          <a href="contact.html"><li>Contact</li></a>
+        </ul>
+      </div>
+      <div class="account">
+        <ul>
+          <a href="index.html"><li><i class="fa-solid fa-house-chimney"></i></li></a>
+          <a href="#"><li><i class="fa-solid fa-magnifying-glass searchicon" id="searchicon2"></i></li></a>
+          <div class="search" id="searchinput2">
+            <input type="search" placeholder="Rechercher...">
+            <i class="fa-solid fa-magnifying-glass srchicon"></i>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== INTRO PRODUITS ===== -->
+  <section class="intro-produits">
+    <h1>Nos Produits</h1>
+    <p>Découvrez la sélection de poissons frais, crustacés, filets et poissons congelés.</p>
+  </section>
+
+  <!-- ===== FILTRES ===== -->
+  <section class="filters">
+    <label for="categoryFilter">Filtrer par catégorie :</label>
+    <select id="categoryFilter">
+      <option value="all">Toutes les catégories</option>
+      <option value="poisson-entier">Poissons entiers frais</option>
+      <option value="crustace">Crustacés</option>
+      <option value="filet">Filets</option>
+      <option value="congele">Poissons congelés</option>
+    </select>
+  </section>
+
+  <!-- ===== PRODUITS ===== -->
+  <main id="productList" class="product-list">
+
+    <!-- Poissons entiers frais -->
+    <div class="product-card" data-category="poisson-entier">
+      <img src="./images/sole-portion.jpeg" alt="Sole portion">
+      <h3>Sole portion (350g-400g)</h3>
+      <p>Sole fraîche, idéale pour les plats raffinés. Chair délicate et savoureuse.</p>
+      <span>Prix : 6 000 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="poisson-entier">
+      <img src="./images/sole-g.jpeg" alt="Sole G pièce">
+      <h3>Sole G pièce (700g-800g)</h3>
+      <p>Grande sole fraîche, parfaite pour les recettes gastronomiques.</p>
+      <span>Prix : 7 500 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="poisson-entier">
+      <img src="./images/carpe.jpg" alt="Carpes portion">
+      <h3>Carpes portion (350g-400g)</h3>
+      <p>Carpe tendre, riche en goût, parfaite pour bouillons et grillades.</p>
+      <span>Prix : 5 000 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="poisson-entier">
+      <img src="./images/dorade.jpg" alt="Dorade portion">
+      <h3>Dorade portion (450g)</h3>
+      <p>Dorade fraîche, chair blanche et savoureuse, idéale au four.</p>
+      <span>Prix : 5 500 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="poisson-entier">
+      <img src="./images/tilapia.jpeg" alt="Tilapia">
+      <h3>Tilapia</h3>
+      <p>Poisson populaire, doux et facile à préparer.</p>
+      <span>Prix : 4 500 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="poisson-entier">
+      <img src="./images/bar.webp" alt="Bars portion">
+      <h3>Bars portion</h3>
+      <p>Bar frais à la chair fine, idéal pour les grillades.</p>
+      <span>Prix : 6 000 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="poisson-entier">
+      <img src="./images/capitain.jpeg" alt="Capitain portion">
+      <h3>Capitain portion</h3>
+      <p>Capitain de qualité, goût raffiné, parfait pour vos recettes spéciales.</p>
+      <span>Prix : 7 000 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="poisson-entier">
+      <img src="./images/bossue.jpeg" alt="Bossue">
+      <h3>Bossue</h3>
+      <p>Poisson ferme, savoureux, très apprécié en cuisson traditionnelle.</p>
+      <span>Prix : 5 500 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="poisson-entier">
+      <img src="./images/bar-grand.webp" alt="Bars gp">
+      <h3>Bars gp</h3>
+      <p>Grand bar, chair délicate, parfait pour la cuisine familiale.</p>
+      <span>Prix : 6 500 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="poisson-entier">
+      <img src="./images/capitaine-grand.jpg" alt="Capitain gp">
+      <h3>Capitain Gp</h3>
+      <p>Capitain de grande taille, goût riche et apprécié des connaisseurs.</p>
+      <span>Prix : 8 000 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="poisson-entier">
+      <img src="./images/barracuda.jpg" alt="Barracuda">
+      <h3>Barracuda</h3>
+      <p>Poisson puissant, chair ferme, idéal pour grillades et plats épicés.</p>
+      <span>Prix : 7 500 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="poisson-entier">
+      <img src="./images/thon-rouge.jpg" alt="Thon rouge">
+      <h3>Thon rouge</h3>
+      <p>Thon d’exception, chair rouge, idéal pour sushis et grillades.</p>
+      <span>Prix : 9 000 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="poisson-entier">
+      <img src="./images/machoiron.jpeg" alt="Machoiron">
+      <h3>Machoiron</h3>
+      <p>Poisson d’eau douce, chair tendre et savoureuse.</p>
+      <span>Prix : 4 800 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="poisson-entier">
+      <img src="./images/friture.jpeg" alt="Friture">
+      <h3>Friture (Mudyamuto)</h3>
+      <p>Petits poissons frits, croustillants et délicieux en apéritif.</p>
+      <span>Prix : 3 000 FCFA/kg</span>
     </div>
 
-    <div class="footer">
-        <div class="footer-1">
-            <div class="logo">
-                <img src="./images/official logo.jpg" alt="">
-            </div>
-            <div>
-                <address>
-                    <p>Email: poissonneriengounnou@gmail.com</p>
-                    <p>+237 657 662 216</p>
-                    <p>Marche central, <br> yaounde </br> Cameroun</p>
-                </address>
-            </div>
-        </div>
-        <div class="footer-2">
-            <img src="./images/logo1.jpg" alt="">
-            <h2>powered by <em>NGOUNNOU </em></h2>
-        </div>
+    <!-- Crustacés -->
+    <div class="product-card" data-category="crustace">
+      <img src="./images/gambas.jpeg" alt="Gambas">
+      <h3>Gambas</h3>
+      <p>Grosses crevettes savoureuses, parfaites pour grillades et sauces.</p>
+      <span>Prix : 12 000 FCFA/kg</span>
     </div>
-    <script src="app.js"></script>
+    <div class="product-card" data-category="crustace">
+      <img src="./images/crevette-deco.webp" alt="Crevette décortiquée">
+      <h3>Crevette décortiquée</h3>
+      <p>Prêtes à l’emploi, idéales pour les plats rapides et gourmands.</p>
+      <span>Prix : 10 000 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="crustace">
+      <img src="./images/crevette-royal.jpg" alt="Crevette Royal N°3">
+      <h3>Crevette Royal N°3</h3>
+      <p>Crevettes de qualité supérieure, goût raffiné.</p>
+      <span>Prix : 11 500 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="crustace">
+      <img src="./images/calamars.jpg" alt="Calamar">
+      <h3>Calamar</h3>
+      <p>Chair tendre, très apprécié en friture et grillades.</p>
+      <span>Prix : 7 000 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="crustace">
+      <img src="./images/langouste.jpeg" alt="Langouste">
+      <h3>Langouste</h3>
+      <p>Délice de la mer, goût raffiné, prisé pour les repas festifs.</p>
+      <span>Prix : 20 000 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="crustace">
+      <img src="./images/escargot-mer.jpg" alt="Escargot de mer">
+      <h3>Escargot de mer</h3>
+      <p>Chair ferme, goût iodé, idéal en sauces.</p>
+      <span>Prix : 6 000 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="crustace">
+      <img src="./images/escargot-local.jpg" alt="Escargot local">
+      <h3>Escargot local</h3>
+      <p>Escargot traditionnel, savoureux et nutritif.</p>
+      <span>Prix : 4 500 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="crustace">
+      <img src="./images/crabes.webp" alt="Crabes">
+      <h3>Crabes</h3>
+      <p>Délicieux et riches en chair, idéals en soupes et sauces.</p>
+      <span>Prix : 8 000 FCFA/kg</span>
+    </div>
+
+    <!-- Filets -->
+    <div class="product-card" data-category="filet">
+      <img src="./images/filet-capitain.jpeg" alt="Filet de Capitain">
+      <h3>Filet de Capitain</h3>
+      <p>Chair tendre, goût raffiné, parfait pour plats fins.</p>
+      <span>Prix : 8 500 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="filet">
+      <img src="./images/filet-bar.jpg" alt="Filet de Bars">
+      <h3>Filet de Bars</h3>
+      <p>Chair fine et délicieuse, facile à préparer.</p>
+      <span>Prix : 9 000 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="filet">
+      <img src="./images/filet-carpe.jpg" alt="Filet de Carpe">
+      <h3>Filet de Carpe</h3>
+      <p>Texture moelleuse et goût agréable.</p>
+      <span>Prix : 7 000 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="filet">
+      <img src="./images/filet-barracuda.jpeg" alt="Filet de Barracuda">
+      <h3>Filet de Barracuda</h3>
+      <p>Chair ferme, riche en saveur.</p>
+      <span>Prix : 9 500 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="filet">
+      <img src="./images/filet-sole.jpg" alt="Filet de Sole">
+      <h3>Filet de Sole</h3>
+      <p>Chair raffinée, goût subtil, idéal pour plats gourmets.</p>
+      <span>Prix : 11 000 FCFA/kg</span>
+    </div>
+
+    <!-- Poissons congelés -->
+    <div class="product-card" data-category="congele">
+      <img src="./images/maquereau.webp" alt="Maquereau">
+      <h3>Maquereau</h3>
+      <p>Poisson riche en oméga-3, idéal grillé ou fumé.</p>
+      <span>Prix : 4 500 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="congele">
+      <img src="./images/loche.jpeg" alt="Loches (bars suisse)">
+      <h3>Loches (bars suisse)</h3>
+      <p>Chair tendre et savoureuse, très apprécié.</p>
+      <span>Prix : 6 000 FCFA/kg</span>
+    </div>
+    <div class="product-card" data-category="congele">
+      <img src="./images/morue.jpeg" alt="Morue">
+      <h3>Morue</h3>
+      <p>Poisson blanc, goût délicat, idéal en plats traditionnels.</p>
+      <span>Prix : 7 500 FCFA/kg</span>
+    </div>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <div class="footer">
+    <div class="footer-1">
+      <div class="logo">
+        <img src="./images/official logo.jpg" alt="Logo NGOUNNOU">
+      </div>
+      <div>
+        <address>
+          <p>Email: etsngounou0@gmail.com</p>
+          <p>+237 691 553 027</p>
+          <p>+237 670 421 269</p> 
+          <p>Youpé,<br> Douala <br> Cameroun</p>
+        </address>
+      </div>
+    </div>
+    <div class="footer-2">
+      <img src="./images/logo1.jpg" alt="">
+      <h2>powered by <em>NGOUNOU</em></h2>
+    </div>
+  </div>
+   <script src="script.js" defer></script>
 </body>
 </html>

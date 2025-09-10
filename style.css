@@ -151,6 +151,12 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.product-items h2{
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    padding: 20px 0;
+}
 .item{
     width: 250px;
     padding: 30px;
@@ -357,57 +363,92 @@
     
 }
 .main_slide4 .chef-feed{
-    flex: 0.5;
-    margin-top: 30px;
+    max-width: 900px;
+  text-align: center;
+  padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin: auto;
+  background: #f9f9f9;
 }
-.main_slide4 .client{
-    flex: 0.5;
-    text-align: right;
+.main_slide4 .chef-feed h2 {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 20px;
 }
-.main_slide4 .client img{
-    margin-top: -130px;
-    width: 50vw;
-    max-width: 490px;
+
+.main_slide4 .carousel {  
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+    border-radius: 10px;
+  
 }
-.main_slide4 .chef-feed h2{
-    font-size: 32px;
-    margin-bottom: 25px;
+.main_slide4 .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out; 
+  
 }
-.main_slide4 .chef-feed p{
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 10px;
-    text-align: justify;
-    color: #444;
-    line-height: 1.6;
+.main_slide4 .testimonial {  
+  flex: 0 0 100%; 
+  box-sizing: border-box;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-.main_slide4 .chef-detail{
-    margin-top: 20px;
-    display: flex;
-    margin: 25px 0;
-    align-items: center;
+.main_slide4 .testimonial p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 15px;
 }
-.main_slide4 .chef-detail img{
-    width: 50px;
-    border-radius: 50%;
-    margin-right: 15px;
-    border: 4px solid white;
+
+.main_slide4 .client {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
 }
-.main_slide4 .chef-detail h6{
-    font-size: 14px;
+
+.main_slide4 .client img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit:cover;
+  margin-bottom: 15px;
+  border: 3px solid #d32f2f;
 }
-.main_slide4 .chef-detail p{
-    font-size: 11px;
-    color: red;
+.main_slide4 .carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
 }
+
+.main_slide4 .carousel-btn:hover {
+  background: #a91d1d;
+}
+
+.main_slide4 .carousel-btn.prev {
+  left: 10px;
+}
+
+.main_slide4 .carousel-btn.next {
+  right: 10px;
+}
+
 .main_slide4 .chef-vic{
     display: flex;
     align-items: center;
     padding: 25px 20px;
     background-color: rgb(253, 77, 8);
     border-radius: 0 100px 0 0;
-    margin-top: 40px;
-    width: 100%;
+    margin-top: 20px;
+    
 }
 .main_slide4 .chef-vic div{
     display: flex;
@@ -415,7 +456,7 @@
     margin-right: 20px;
     flex: 0.5;
     height: 27px;
-    overflow: hidden;
+    
 }
 .main_slide4 .chef-vic div i, .main_slide4 .chef-vic div h4{
     color: white;
@@ -485,13 +526,12 @@
     color: #2d6ca2;
     margin-top: 40px;
     margin-bottom: 20px;
-    text-align: left;
+    text-align: center;
     font-weight: bold;
 }
 
 .apropos p {
-    font-size: 1.1rem;
-    color: #333;
+    font-size: 14px;
     line-height: 1.7;
     margin-bottom: 18px;
     text-align: justify;
@@ -534,10 +574,14 @@
 }
 
 .team-member p {
-    font-size: 0.98rem;
+    font-size: 14px;
     color: #444;
     margin-bottom: 0;
     text-align: center;
+}
+
+.produits-bg {
+    background-color: rgb(173, 216, 230);
 }
 
 .product-items {
@@ -551,49 +595,109 @@
     margin: 60px 0;
 }
 
-.product-card {
-    background: rgb(194, 220, 241);
+.intro-produits {
+  text-align: center;      /* centre le texte */
+  margin: 40px auto;       /* espace autour + centrage horizontal */
+  max-width: 800px;        /* limite la largeur pour lisibilité */
+  padding: 20px;
+}
+
+.intro-produits h1 {
+  font-size: 2rem;
+  color: #1a3556;          /* bleu foncé */
+  margin-bottom: 10px;
+}
+
+.intro-produits p {
+  font-size: 18px;
+  color: #444;
+}
+
+
+.filters {
+    display: flex;
+    justify-content: flex-start; /* place le contenu à l’extrême gauche */
+    align-items: center;         /* aligne verticalement label et select */
+    gap: 10px;                   /* espace entre le label et le select */
+    margin: 20px 60vw;            /* marge horizontale */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.08);
+    max-width: 400px;            /* largeur max pour le bloc */
+}
+
+.filters label {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #1a3556;
+    white-space: nowrap; /* évite que le texte se casse */
+}
+#searchBar{
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #bcd2e8;
+    font-size: 1rem;
+}
+
+#categoryFilter{
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #bcd2e8;
+    font-size: 1rem;
+    background: white;
+}
+.product-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 50px 0;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.product-card{
+    background: rgb(194,220,241);
     border-radius: 18px;
-    box-shadow: 0 2px 16px rgba(44, 62, 80, 0.12);
+    box-shadow: 0 2px 16px rgba(44,62,80,0.12);
     width: 260px;
     padding: 28px 18px 22px 18px;
-    margin-bottom: 10px;
     text-align: center;
-    transition: box-shadow 0.2s;
+    transition: all 0.3s;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.product-card:hover {
-    box-shadow: 0 6px 24px rgba(44, 62, 80, 0.18);
+
+.product-card:hover{
+    box-shadow: 0 6px 24px rgba(44,62,80,0.18);
 }
 
-.product-card img {
+.product-card img{
     width: 120px;
     height: 120px;
     object-fit: cover;
     border-radius: 12px;
     margin-bottom: 18px;
-    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
 }
 
-.product-card h3 {
+.product-card h3{
     font-size: 1.15rem;
+    font-weight: bold;
     color: #1a3556;
     margin-bottom: 10px;
-    font-weight: bold;
 }
-.product-card p {
-    font-size: 0.98rem;
+
+.product-card p{
+    font-size: 0.95rem;
     color: #444;
     margin-bottom: 8px;
 }
 
-.product-card .product-price {
-    color: rgb(253, 77, 8);
+.product-card .product-price{
+    color: rgb(253,77,8);
     font-weight: bold;
     font-size: 1rem;
-    margin-top: 8px;
 }
 
 .contact-section {
@@ -812,16 +916,18 @@
     .main_slide4{
         margin-top: 150px;
     }
-    .main_slide4 .chef-feed{
-        flex: 1;
+    .main_slide4 .testimonial {
+        padding: 20px;
     }
-    .main_slide4 .client{
-        flex: 1;
+
+    .main_slide4 .client {
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        margin-bottom: 40px;
     }
-    .main_slide4 .client img{
-        width: 80vw;
+
+    .main_slide4 .client img {
+        margin-bottom: 10px;
     }
     
     .footer .footer-1 div{
@@ -862,6 +968,21 @@
         height: 70px;
         margin-bottom: 10px;
     }
+    .filters {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .filters label {
+    font-size: 0.95rem;
+  }
+
+  .filters select {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
     .product-card {
         width: 48vw;
         min-width: 150px;
@@ -947,6 +1068,41 @@
     .main_slide3 .dsgn{
         display: none;
     }
+    .main_slide4 .testimonial {
+        padding: 15px;
+    }
+
+    .main_slide4 .testimonial p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .main_slide4 .client {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .main_slide4 .client img {
+        width: 80px;
+        height: 80px;
+        border-width: 2px;
+        margin-bottom: 5px;
+    }
+
+    .main_slide4 .client h6 {
+        font-size: 0.95rem;
+    }
+
+    .main_slide4 .client p {
+        font-size: 0.85rem;
+    }
+
+    .main_slide4 .carousel-btn {
+        padding: 8px 12px;
+        font-size: 18px;
+    }
     .main_slide4 .chef-vic div p{
         display: none;
         font-size: 0;
@@ -999,6 +1155,22 @@
         height: 55px;
         margin-bottom: 7px;
     }
+    .filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .filters label {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+
+  .filters select {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
     .product-items {
         gap: 16px;
         padding: 20px 0;
