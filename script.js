@@ -1,3 +1,4 @@
+// script.js
 const searchicon1 = document.querySelector('#searchicon1');
 const srchicon1 = document.querySelector('#srchicon1');
 const search1 = document.querySelector('#searchinput1');
@@ -32,81 +33,16 @@ cross.addEventListener('click', function(){
     headerbar.style.right = '-100%';
 })
 
-document.getElementById('whatsappBtn').addEventListener('click', function(e) {
-        e.preventDefault();
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
-        const text = encodeURIComponent(
-            `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`
-        );
-        window.open(`https://wa.me/237691553027?text=${text}`, '_blank');
-    });
-
-    document.getElementById('gmailBtn').addEventListener('click', function(e) {
-        e.preventDefault();
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
-        const subject = encodeURIComponent('Contact depuis le site');
-        const body = encodeURIComponent(
-            `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`
-        );
-        window.open(`mailto:etsngounou0@gmail.com?subject=${subject}&body=${body}`, '_blank');
-    });
-
-
-// ====== RECHERCHE HEADER ======
-function setupSearch(iconId, inputId) {
-    const icon = document.querySelector(iconId);
-    const inputContainer = document.querySelector(inputId);
-    const inputField = inputContainer ? inputContainer.querySelector('input') : null;
-
-    if (!icon || !inputContainer || !inputField) return;
-
-    icon.addEventListener('click', () => {
-        inputContainer.style.display = 'flex';
-        icon.style.display = 'none';
-        inputField.focus();
-    });
-
-    inputField.addEventListener('input', filterProducts);
-}
-
-setupSearch('#searchicon1', '#searchinput1');
-setupSearch('#searchicon2', '#searchinput2');
 
 
 
-// ====== FILTRE PRODUITS ======
-const categoryFilter = document.getElementById('categoryFilter');
-const products = document.querySelectorAll('.product-card');
-
-function filterProducts() {
-    const selectedCategory = categoryFilter ? categoryFilter.value.toLowerCase() : 'all';
-    const searchQuery1 = document.querySelector('#searchinput1 input')?.value.toLowerCase() || '';
-    const searchQuery2 = document.querySelector('#searchinput2 input')?.value.toLowerCase() || '';
-    const searchQuery = searchQuery1 || searchQuery2;
-
-    products.forEach(product => {
-        const title = product.querySelector('h3')?.textContent.toLowerCase() || '';
-        const description = product.querySelector('p')?.textContent.toLowerCase() || '';
-        const matchCategory = selectedCategory === 'all' || product.dataset.category === selectedCategory;
-        const matchSearch = !searchQuery || title.includes(searchQuery) || description.includes(searchQuery);
-
-        product.style.display = (matchCategory && matchSearch) ? 'block' : 'none';
-    });
-}
-
-if (categoryFilter) {
-    categoryFilter.addEventListener('change', filterProducts);
-}
-
-// ====== INITIALISATION ======
-filterProducts();
 
 
-// script.js
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const track = document.querySelector('.carousel .carousel-track');
   const slides = track ? Array.from(track.querySelectorAll('.testimonial')) : [];
@@ -153,6 +89,84 @@ document.addEventListener('DOMContentLoaded', () => {
   // Init
   updateSlidePosition();
 });
+
+
+
+
+
+// ==== SÉLECTION DES ÉLÉMENTS ====
+const categoryFilter = document.getElementById('categoryFilter');
+const productList = document.getElementById('productList');
+const allProducts = Array.from(document.querySelectorAll('.product-card'));
+
+// Recherche dans les champs du header
+const searchInput1 = document.querySelector('#searchinput1 input');
+const searchInput2 = document.querySelector('#searchinput2 input');
+
+// ==== FONCTION DE FILTRAGE ====
+function filterProducts() {
+    const selectedCategory = categoryFilter.value.toLowerCase();
+    const searchTerm1 = searchInput1.value.toLowerCase();
+    const searchTerm2 = searchInput2.value.toLowerCase();
+
+    // Combinaison des deux recherches texte
+    const searchTerm = searchTerm1 || searchTerm2;
+
+    // Vider le conteneur avant affichage
+    productList.innerHTML = '';
+
+    const filteredProducts = allProducts.filter(product => {
+        const categoryMatch = selectedCategory === 'all' || product.dataset.category === selectedCategory;
+        const textMatch = product.querySelector('h3').textContent.toLowerCase().includes(searchTerm)
+                       || product.querySelector('p').textContent.toLowerCase().includes(searchTerm);
+        return categoryMatch && textMatch;
+    });
+
+    filteredProducts.forEach(product => {
+        productList.appendChild(product);
+    });
+}
+
+// ==== ÉVÉNEMENTS ====
+categoryFilter.addEventListener('change', filterProducts);
+searchInput1.addEventListener('input', filterProducts);
+searchInput2.addEventListener('input', filterProducts);
+
+// ==== INITIALISATION ====
+filterProducts();
+
+
+
+
+
+
+
+
+// ====== FORMULAIRE CONTACT ======
+document.getElementById('whatsappBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const text = encodeURIComponent(
+            `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`
+        );
+        window.open(`https://wa.me/237657662216?text=${text}`, '_blank');
+    });
+
+    document.getElementById('gmailBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const subject = encodeURIComponent('Contact depuis le site');
+        const body = encodeURIComponent(
+            `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`
+        );
+        window.open(`mailto:etsngounou0@gmail.com?subject=${subject}&body=${body}`, '_blank');
+    });
+
+
 
 
 
